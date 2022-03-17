@@ -1,0 +1,118 @@
+{
+  "api": {
+    "name": "AioUtilPlugin",
+    "slug": "aioutilplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "ffScreenshot",
+        "signature": "(options: ffScreenshotOptions) => Promise<{ resultCode: number; outPutFile: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ffScreenshotOptions"
+          }
+        ],
+        "returns": "Promise<{ resultCode: number; outPutFile: string; }>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "视频截图（原图）",
+        "complexTypes": [
+          "ffScreenshotOptions"
+        ],
+        "slug": "ffscreenshot"
+      },
+      {
+        "name": "ffTransCode",
+        "signature": "(options: ffTransCodeOptions) => Promise<{ resultCode: number; outPutFile: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ffTransCodeOptions"
+          }
+        ],
+        "returns": "Promise<{ resultCode: number; outPutFile: string; }>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "视频转码",
+        "complexTypes": [
+          "ffTransCodeOptions"
+        ],
+        "slug": "fftranscode"
+      },
+      {
+        "name": "takeVideo",
+        "signature": "() => Promise<{ resultCode: number; outPutFile: string; }>",
+        "parameters": [],
+        "returns": "Promise<{ resultCode: number; outPutFile: string; }>",
+        "tags": [],
+        "docs": "录视频",
+        "complexTypes": [],
+        "slug": "takevideo"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ffScreenshotOptions",
+      "slug": "ffscreenshotoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "videoFile",
+          "tags": [],
+          "docs": "视频路径",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "atTime",
+          "tags": [],
+          "docs": "截图时间",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "ffTransCodeOptions",
+      "slug": "fftranscodeoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "videoFile",
+          "tags": [],
+          "docs": "视频路径",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "videoBitrate",
+          "tags": [],
+          "docs": "比特率（例如：6000k）",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

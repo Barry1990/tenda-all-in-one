@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tenda.aio">
+
+    <application>
+        <activity
+            android:configChanges="keyboard|orientation|screenSize"
+            android:name=".activity.VideoCameraActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

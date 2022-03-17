@@ -1,6 +1,10 @@
 # tenda-all-in-one
 
-all in one
+这是个Ionic Capacitor自定义插件，近期在使用ionic开发app，官方的插件已经无法满足开发需求，所以打算做个全家桶插件
+
+## 集成
+tanersener/mobile-ffmpeg
+CJT2325/CameraView
 
 ## Install
 

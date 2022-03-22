@@ -85,6 +85,20 @@
           "docs": "截图时间",
           "complexTypes": [],
           "type": "number"
+        },
+        {
+          "name": "imageW",
+          "tags": [],
+          "docs": "图片宽度",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "imageH",
+          "tags": [],
+          "docs": "图片高度",
+          "complexTypes": [],
+          "type": "number"
         }
       ]
     },

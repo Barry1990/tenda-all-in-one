@@ -20,8 +20,11 @@ public class AioUtilPlugin extends Plugin {
     public void ffScreenshot(PluginCall call) {
         String videoFile = call.getString("videoFile");
         Float atTime = call.getFloat("atTime");
+        Float imageW = call.getFloat("imageW");
+        Float imageH = call.getFloat("imageH");
+
         ffmpegUtil.setContext(this.getContext());
-        ffmpegUtil.ffScreenshot(videoFile,atTime,call);
+        ffmpegUtil.ffScreenshot(videoFile,atTime,imageW,imageH,call);
     }
 
     @PluginMethod

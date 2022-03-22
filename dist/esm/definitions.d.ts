@@ -7,6 +7,14 @@ export interface ffScreenshotOptions {
      * 截图时间
      */
     atTime: number;
+    /**
+     * 图片宽度
+     */
+    imageW: number;
+    /**
+     * 图片高度
+     */
+    imageH: number;
 }
 export interface ffTransCodeOptions {
     /**

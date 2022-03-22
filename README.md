@@ -84,6 +84,8 @@ takeVideo() => Promise<{ resultCode: number; outPutFile: string; }>
 | --------------- | ------------------- | ----------- |
 | **`videoFile`** | <code>string</code> | 视频路径        |
 | **`atTime`**    | <code>number</code> | 截图时间        |
+| **`imageW`**    | <code>number</code> | 图片宽度        |
+| **`imageH`**    | <code>number</code> | 图片高度        |
 
 
 #### ffTransCodeOptions

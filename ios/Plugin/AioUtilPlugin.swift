@@ -12,7 +12,9 @@ public class AioUtilPlugin: CAPPlugin {
     @objc func ffScreenshot(_ call: CAPPluginCall) {
         let videoFile = call.getString("videoFile") ?? "";
         let atTime = call.getFloat("atTime") ?? 0.0;
-        ffmpegUtil.ffScreenshot(videoFile: videoFile, atTime: atTime , call: call);
+        let imageW = call.getFloat("imageW") ?? 0.0;
+        let imageH = call.getFloat("imageH") ?? 0.0;
+        ffmpegUtil.ffScreenshot(videoFile: videoFile, atTime: atTime ,imageW: imageW , imageH: imageH, call: call);
     }
     
     @objc func ffTransCode(_ call: CAPPluginCall) {

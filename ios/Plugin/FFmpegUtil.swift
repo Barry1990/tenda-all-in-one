@@ -19,12 +19,12 @@ import Capacitor
     /**
      视频截图
      */
-    @objc public func ffScreenshot(videoFile: String, atTime: Float, call: CAPPluginCall) {
+    @objc public func ffScreenshot(videoFile: String, atTime: Float , imageW: Float , imageH: Float, call: CAPPluginCall) {
         _call = call;
         let cachePath = NSHomeDirectory() + "/Library/Caches/"
         let  now =  NSDate ();
-        let outPutFile: String =  String(format: "%@%d_ff_thumbnail.jpg", cachePath,Int(now.timeIntervalSince1970));
-        let cmd = String(format: " -i %@ -f image2 -ss %f -vframes 1 %@", videoFile, atTime, outPutFile);
+        let outPutFile: String =  String(format: "%@%d_%f_ff_thumbnail.jpg", cachePath,Int(now.timeIntervalSince1970),atTime);
+        let cmd = String(format: " -ss %f -i %@ -f image2 -s %fx%f  -vframes 1 %@", atTime, videoFile, imageW, imageH, outPutFile);
         MobileFFmpeg.executeAsync(cmd, withCallback: self);
         _outPutFile = outPutFile;
     }

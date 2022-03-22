@@ -24,7 +24,7 @@ public class FFmpegUtil {
     public void ffScreenshot(String videoFile, Float atTime, Float imageW,Float imageH,PluginCall call){
         String cachePath = this.context.getCacheDir().getPath();
         String outPutFile = cachePath + System.currentTimeMillis() +"_ff_thumbnail.jpg";
-        String cmd = String.format(" -ss %f -i %s -f image2 -s %fx%f -vframes 1 %s",atTime,videoFile,imageW,imageH,outPutFile);
+        String cmd = String.format(" -ss %f -i %s -f image2 -s %dx%d -vframes 1 %s",atTime,videoFile,Math.round(imageW),Math.round(imageH),outPutFile);
         FFmpeg.executeAsync(cmd, new ExecuteCallback() {
            @Override
            public void apply(long executionId, int returnCode) {

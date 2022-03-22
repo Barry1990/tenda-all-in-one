@@ -24,7 +24,7 @@ import Capacitor
         let cachePath = NSHomeDirectory() + "/Library/Caches/"
         let  now =  NSDate ();
         let outPutFile: String =  String(format: "%@%d_%f_ff_thumbnail.jpg", cachePath,Int(now.timeIntervalSince1970),atTime);
-        let cmd = String(format: " -ss %f -i %@ -f image2 -s %fx%f  -vframes 1 %@", atTime, videoFile, imageW, imageH, outPutFile);
+        let cmd = String(format: " -ss %f -i %@ -f image2 -s %dx%d  -vframes 1 %@", atTime, videoFile, Int(imageW), Int(imageH), outPutFile);
         MobileFFmpeg.executeAsync(cmd, withCallback: self);
         _outPutFile = outPutFile;
     }

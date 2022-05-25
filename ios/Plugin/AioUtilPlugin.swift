@@ -24,7 +24,7 @@ public class AioUtilPlugin: CAPPlugin {
     }
 
      @objc func ffCmd(_ call: CAPPluginCall) {
-        let cmd = call.getString("cmd");
+        let cmd = call.getString("cmd") ?? "";
         ffmpegUtil.ffCmd(cmd: cmd , call: call);
     }
 }

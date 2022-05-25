@@ -20,6 +20,7 @@ npx cap sync
 
 * [`ffScreenshot(...)`](#ffscreenshot)
 * [`ffTransCode(...)`](#fftranscode)
+* [`ffCmd(...)`](#ffcmd)
 * [`takeVideo()`](#takevideo)
 * [Interfaces](#interfaces)
 
@@ -62,6 +63,21 @@ ffTransCode(options: ffTransCodeOptions) => Promise<{ resultCode: number; outPut
 --------------------
 
 
+### ffCmd(...)
+
+```typescript
+ffCmd(options: ffCmdOptions) => Promise<{ resultCode: number; outPutFile: string; }>
+```
+
+| Param         | Type                                                  |
+| ------------- | ----------------------------------------------------- |
+| **`options`** | <code><a href="#ffcmdoptions">ffCmdOptions</a></code> |
+
+**Returns:** <code>Promise&lt;{ resultCode: number; outPutFile: string; }&gt;</code>
+
+--------------------
+
+
 ### takeVideo()
 
 ```typescript
@@ -94,5 +110,12 @@ takeVideo() => Promise<{ resultCode: number; outPutFile: string; }>
 | ------------------ | ------------------- | ------------- |
 | **`videoFile`**    | <code>string</code> | 视频路径          |
 | **`videoBitrate`** | <code>string</code> | 比特率（例如：6000k） |
+
+
+#### ffCmdOptions
+
+| Prop      | Type                | Description                                                                           |
+| --------- | ------------------- | ------------------------------------------------------------------------------------- |
+| **`cmd`** | <code>string</code> | ffmpeg命令（-i input.png -vf scale=iw:ih -codec libwebp -lossless 0 -quality 75 out.jpg） |
 
 </docgen-api>

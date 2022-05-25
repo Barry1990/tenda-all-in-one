@@ -6,5 +6,7 @@
 CAP_PLUGIN(AioUtilPlugin, "AioUtil",
            CAP_PLUGIN_METHOD(ffScreenshot, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(ffTransCode, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(ffCmd, CAPPluginReturnPromise);
+
 )
 

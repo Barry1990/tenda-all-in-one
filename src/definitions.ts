@@ -28,6 +28,14 @@ export interface ffTransCodeOptions{
    videoBitrate: string
 }
 
+export interface ffCmdOptions{
+  /**
+   * ffmpeg命令（-i input.png  -vf scale=iw:ih -codec libwebp -lossless 0 -quality 75 out.jpg）
+   */
+  cmd: string,
+
+}
+
 export interface AioUtilPlugin {
 
   /**
@@ -41,6 +49,12 @@ export interface AioUtilPlugin {
    * @param options 
    */
   ffTransCode(options: ffTransCodeOptions): Promise<{ resultCode: number ,outPutFile: string }>;
+
+  /**
+   * 
+   * @param options 
+   */
+  ffCmd(options: ffCmdOptions): Promise<{ resultCode: number ,outPutFile: string }>;
 
   /**
    * 录视频

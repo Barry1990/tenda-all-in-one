@@ -22,4 +22,9 @@ public class AioUtilPlugin: CAPPlugin {
         let videoBitrate = call.getString("videoBitrate") ?? "6000k";
         ffmpegUtil.ffTransCode(videoFile: videoFile, videoBitrate: videoBitrate , call: call);
     }
+
+     @objc func ffCmd(_ call: CAPPluginCall) {
+        let cmd = call.getString("cmd");
+        ffmpegUtil.ffCmd(cmd: cmd , call: call);
+    }
 }

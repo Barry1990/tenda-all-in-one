@@ -52,6 +52,29 @@
         "slug": "fftranscode"
       },
       {
+        "name": "ffCmd",
+        "signature": "(options: ffCmdOptions) => Promise<{ resultCode: number; outPutFile: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ffCmdOptions"
+          }
+        ],
+        "returns": "Promise<{ resultCode: number; outPutFile: string; }>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          }
+        ],
+        "docs": "",
+        "complexTypes": [
+          "ffCmdOptions"
+        ],
+        "slug": "ffcmd"
+      },
+      {
         "name": "takeVideo",
         "signature": "() => Promise<{ resultCode: number; outPutFile: string; }>",
         "parameters": [],
@@ -120,6 +143,22 @@
           "name": "videoBitrate",
           "tags": [],
           "docs": "比特率（例如：6000k）",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "ffCmdOptions",
+      "slug": "ffcmdoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "cmd",
+          "tags": [],
+          "docs": "ffmpeg命令（-i input.png  -vf scale=iw:ih -codec libwebp -lossless 0 -quality 75 out.jpg）",
           "complexTypes": [],
           "type": "string"
         }

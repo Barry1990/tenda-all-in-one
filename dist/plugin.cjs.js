@@ -9,6 +9,10 @@ const AioUtil = core.registerPlugin('AioUtil', {
 });
 
 class AioUtilWeb extends core.WebPlugin {
+    ffCmd(options) {
+        console.log('ffCmd', options);
+        throw new Error('Method not implemented.');
+    }
     takeVideo() {
         throw new Error('Method not implemented.');
     }

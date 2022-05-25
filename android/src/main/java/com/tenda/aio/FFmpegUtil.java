@@ -56,4 +56,20 @@ public class FFmpegUtil {
             }
         });
     }
+
+    /**
+     * 直接调用指令
+     * @param cmd
+     * @param call
+     */
+    public void ffCmd( String cmd, PluginCall call){
+        FFmpeg.executeAsync(cmd, new ExecuteCallback() {
+            @Override
+            public void apply(long executionId, int returnCode) {
+                JSObject ret = new JSObject();
+                ret.put("resultCode", returnCode);
+                call.resolve(ret);
+            }
+        });
+    }
 }

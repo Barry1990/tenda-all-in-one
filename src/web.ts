@@ -1,8 +1,12 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { AioUtilPlugin,ffScreenshotOptions, ffTransCodeOptions } from './definitions';
+import type { AioUtilPlugin,ffCmdOptions,ffScreenshotOptions, ffTransCodeOptions } from './definitions';
 
 export class AioUtilWeb extends WebPlugin implements AioUtilPlugin {
+  ffCmd(options: ffCmdOptions): Promise<{ resultCode: number; outPutFile: string; }> {
+    console.log('ffCmd',options);
+    throw new Error('Method not implemented.');
+  }
   
   takeVideo(): Promise<{ resultCode: number; outPutFile: string; }> {
     throw new Error('Method not implemented.');

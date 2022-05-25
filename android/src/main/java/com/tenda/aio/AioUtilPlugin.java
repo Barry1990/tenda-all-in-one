@@ -35,6 +35,13 @@ public class AioUtilPlugin extends Plugin {
         ffmpegUtil.ffTransCode(videoFile,videoBitrate,call);
     }
 
+    @PluginMethod
+    public void ffCmd(PluginCall call) {
+        String cmd = call.getString("cmd");
+        ffmpegUtil.setContext(this.getContext());
+        ffmpegUtil.ffCmd(cmd,call);
+    }
+
     /**
      * 自定义录像
      * @param call

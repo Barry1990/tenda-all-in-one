@@ -41,6 +41,15 @@ import Capacitor
         MobileFFmpeg.executeAsync(cmd, withCallback: self);
         _outPutFile = outPutFile;
     }
+
+    /**
+     直接调用指令
+     */
+    @objc public func ffCmd( cmd: String , call: CAPPluginCall ){
+        _call = call;
+        MobileFFmpeg.executeAsync(cmd, withCallback: self);
+        _outPutFile = '';
+    }
  
     /**
      ffmpeg回调
